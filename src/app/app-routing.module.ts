@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   { path: 'home', loadChildren: './pages/home/home.module#HomePageModule'},
@@ -18,7 +18,9 @@ const routes: Routes = [
   { path: 'item-editar', loadChildren: './pages/item-editar/item-editar.module#ItemEditarPageModule' },
   { path: 'endereco-novo', loadChildren: './pages/endereco-novo/endereco-novo.module#EnderecoNovoPageModule' },
   { path: 'endereco-editar', loadChildren: './pages/endereco-editar/endereco-editar.module#EnderecoEditarPageModule' },
-  { path: 'configuracoes', loadChildren: './pages/configuracoes/configuracoes.module#ConfiguracoesPageModule' },
+  { path: 'orcamentos', loadChildren: './orcamentos/orcamentos.module#OrcamentosPageModule' },
+  { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
+
 ];
 
 @NgModule({

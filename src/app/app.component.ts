@@ -21,11 +21,6 @@ export class AppComponent {
       icon: 'business'
     },
     {
-      title: 'Configurações',
-      url: '/configuracoes',
-      icon: 'settings'
-    }, 
-    {
       title: 'Sair',
       url: '/home',
       icon: 'exit'
