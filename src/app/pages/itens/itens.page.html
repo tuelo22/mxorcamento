@@ -1,0 +1,61 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            Itens
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-fab  vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button (click)="fabClick()">
+            <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+
+    <ion-card *ngFor="let item of itens" color ="light" (click)="editItemClick()">
+        <ion-card-header>
+               <ion-item color="light"> 
+                       <ion-icon name="cube" slot="start"></ion-icon>          
+                       <ion-label>{{item.codigo}}</ion-label>
+                       <ion-button fill="clear" slot="end" color="dark">
+                              <ion-icon name="close-circle"></ion-icon>
+                            </ion-button>
+                   </ion-item>
+        </ion-card-header>
+        <ion-card-content>
+                <ion-grid>
+                    <ion-row size="12">
+                        <ion-col><h2><b>{{item.descricao}}</b></h2></ion-col> 
+                    </ion-row>
+                    <ion-row>
+                        <ion-col ><b>Unidade: </b></ion-col> 
+                        <ion-col >{{item.unidade}}</ion-col> 
+                    </ion-row>
+                    <ion-row>
+                        <ion-col ><b>Quantidade: </b></ion-col> 
+                        <ion-col >{{item.quantidade}}</ion-col> 
+                    </ion-row>
+                    <ion-row>
+                        <ion-col ><b>Tabela de Preços: </b></ion-col> 
+                        <ion-col >{{item.tabelaPreco}}</ion-col> 
+                    </ion-row>
+                    <ion-row>
+                        <ion-col ><b>Preço: </b></ion-col> 
+                        <ion-col >{{item.preco}}</ion-col> 
+                    </ion-row>
+                    <ion-row>
+                        <ion-col ><b>% Desconto: </b></ion-col> 
+                        <ion-col >{{item.percentualDesconto}}</ion-col> 
+                    </ion-row>
+                    <ion-row>
+                        <ion-col ><b>Total: </b></ion-col> 
+                        <ion-col >{{item.total}}</ion-col> 
+                    </ion-row>
+                </ion-grid>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

@@ -1,0 +1,91 @@
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-buttons slot="secondary">
+        <ion-button>
+          <ion-icon slot="icon-only" name="funnel"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title>
+        Orçamentos
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content>
+    <ion-searchbar showCancelButton placeholder="Buscar"></ion-searchbar>
+    <ion-card  color ="warning"  (click)="cardClick()">
+         <ion-card-header>
+                <ion-item color="warning">        
+                        <ion-label><b>Nº:</b> 33118818</ion-label>
+                        <ion-button fill="clear" slot="end" color="dark">
+                               <ion-icon name="close-circle"></ion-icon>
+                             </ion-button>
+                    </ion-item>
+         </ion-card-header>
+         <ion-card-content>
+                 <ion-grid>
+                     <ion-row size="12">
+                         <ion-col><h2><b>Hospital das Clinicas de Niteroi</b></h2></ion-col> 
+                     </ion-row>
+                     <ion-row size="12">
+                         <ion-col><b>Em Aprovação</b></ion-col> 
+                     </ion-row>
+                     <ion-row>
+                         <ion-col ><b>Criação: </b></ion-col> 
+                         <ion-col >20/02/2019</ion-col> 
+                     </ion-row>
+                     <ion-row>
+                         <ion-col ><b>Vencimento: </b></ion-col> 
+                         <ion-col >01/12/2019</ion-col> 
+                     </ion-row>
+                     <ion-row>
+                         <ion-col ><b>Valor: </b></ion-col> 
+                         <ion-col >R$ 2400,00</ion-col> 
+                     </ion-row>
+                 </ion-grid>
+         </ion-card-content>
+     </ion-card>
+
+     <ion-card  color ="success">
+            <ion-card-header>
+                   <ion-item color="success">           
+                           <ion-label><b>Nº:</b> 33118817</ion-label>
+                   </ion-item>
+            </ion-card-header>
+            <ion-card-content>
+                    <ion-grid>
+                        <ion-row size="12">
+                            <ion-col><h2><b>Hospital das Clinicas de Niteroi</b></h2></ion-col> 
+                        </ion-row>
+                        <ion-row size="12">
+                            <ion-col><b>Aprovado</b></ion-col> 
+                        </ion-row>
+                        <ion-row>
+                            <ion-col ><b>Pedido: </b></ion-col> 
+                            <ion-col >656456</ion-col> 
+                        </ion-row>
+                        <ion-row>
+                            <ion-col ><b>Criação: </b></ion-col> 
+                            <ion-col >20/02/2019</ion-col> 
+                        </ion-row>
+                        <ion-row>
+                            <ion-col ><b>Vencimento: </b></ion-col> 
+                            <ion-col >01/12/2019</ion-col> 
+                        </ion-row>
+                        <ion-row>
+                            <ion-col ><b>Valor: </b></ion-col> 
+                            <ion-col >R$ 2400,00</ion-col> 
+                        </ion-row>
+                    </ion-grid>
+            </ion-card-content>
+        </ion-card>
+
+    <ion-fab  vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button (click)="fabClick()">
+            <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+</ion-content>

@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>
+          Hospital de Clinicas de Niterói
+      </ion-title>
+  </ion-toolbar>
+</ion-header>
+  <ion-searchbar showCancelButton placeholder="Buscar"></ion-searchbar>
+  <ion-content padding>
+    <ion-fab  vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button (click)="fabClick()">
+            <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>   
+   
+    <ion-list>
+      <ion-item *ngFor="let endereco of enderecos" (click)="ItemClick()">
+        <ion-label color="secondary">{{endereco}}</ion-label>
+      </ion-item>
+    </ion-list> 
+</ion-content>

@@ -1,0 +1,74 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+           Orçamento: 33118818
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-fab  vertical="top" horizontal="end" slot="fixed">
+        <ion-fab-button (click)="fabClick()">
+            <ion-icon name="cart"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+
+    <ion-item>
+        <ion-label><b>Valor Total: </b> R$ 2.400,00 </ion-label>
+    </ion-item>
+    <ion-item>
+        <ion-label><b>Status: </b>Em Aprovação</ion-label>
+    </ion-item>
+    <br>
+    <ion-item>
+            <ion-label position="stacked">Cliente</ion-label>
+            <ion-input name="cliente" type="text" value="Hospital de Clinicas de Niterói"></ion-input>
+            <ion-icon name="search" slot="start"></ion-icon>
+      </ion-item>  
+
+      <ion-item>
+          <ion-label position="stacked">Endereço de Entrega</ion-label>
+          <ion-input name="enderecoEntrega" type="text" value="Rua La Salle, 12 - Centro, Niterói - RJ, 24020-096"></ion-input>
+          <ion-icon name="search" slot="start"></ion-icon>
+      </ion-item>
+
+      <ion-item>
+          <ion-label position="stacked">Condição de Pagamento</ion-label>
+          <ion-input name="condicaoPagamento" type="text" value="AV - Avista"></ion-input>
+          <ion-icon name="search" slot="start"></ion-icon>
+      </ion-item>
+
+      <ion-item>
+          <ion-label position="stacked">Tipo de Entrega</ion-label>
+        <ion-input name="tipoEntrega" type="text" value="01 - CIF"></ion-input>
+        <ion-icon name="search" slot="start"></ion-icon>
+      </ion-item>      
+      
+      <ion-item>
+          <ion-label position="stacked">Validade</ion-label>
+          <ion-input name="validade" type="text" value="01/12/2019"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label position="floating">Dias para entrega</ion-label>
+          <ion-input name="diasEntrega" type="number" max="15" mim="3" value="15"></ion-input>
+      </ion-item>   
+
+      <ion-item>
+          <ion-label position="floating">Valor do Frete</ion-label>
+          <ion-input name="valorFrete" type="text" value="0,00"></ion-input>
+      </ion-item>
+
+      <br>
+          <ion-button expand="full">
+            <ion-icon slot="start" name="paper-plane"></ion-icon>
+            Enviar alterações
+          </ion-button>
+          <ion-button expand="full" color="success">
+            <ion-icon slot="start" name="add"></ion-icon>
+            Novo Orçamento
+          </ion-button>
+</ion-content>
