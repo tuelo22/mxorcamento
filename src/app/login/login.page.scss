@@ -1,9 +1,34 @@
-.menu{
-    background: url(src\assets\login.png);
-    padding:1%;
+ion-content{
+    --padding-top: 90px;
 }
 
-ion-content{
-    --padding-top: 50%;
+.menu{
+    background: url(src\assets\login.png);
+    max-width: 416px;
+    height: 354px;
+    padding-top: 75px;
+    background-size: cover;
+    margin:auto;
+}
+.topo{
+    padding: 5px;
+}
 
+ion-item, ion-item-divider{
+    --background:transparent;
+    --color:#FFF;
+    --highlight-color-focused:#FFF;
+    padding-left: 0px;
+    margin-left: 0px;
+}
+
+ion-item ion-label{
+    --color:#ECB731;
+    font-weight: bold;
+}
+
+ion-button{
+    margin-top: 16px;
+    margin-left: 16px;   
+    --border-radius: 0;
 }

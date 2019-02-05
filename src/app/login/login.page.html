@@ -1,22 +1,23 @@
 <ion-content padding>
     <div class="menu">
-        <div class="cloned-input">
+        <div class="topo">
         <ion-item> 
-            <ion-label translucent="true" color="light" position="fixed">Usuário</ion-label>
-            <ion-input translucent="true" name="razaoSocial" type="text"></ion-input>
+            <ion-label position="fixed">Usuário</ion-label>
+            <ion-input name="razaoSocial" type="text"></ion-input>
         </ion-item>  
         <ion-item>
-            <ion-label color="light" position="fixed">Senha</ion-label>
+            <ion-label position="fixed">Senha</ion-label>
             <ion-input name="cep" type="password" ></ion-input>
         </ion-item>   
-        <ion-item>
-            <ion-label color="light" position="fixed">Ambiente</ion-label>
+        <ion-item class="selecao">
+            <ion-label position="floating">Ambiente</ion-label>
             <ion-select>
             <ion-select-option selected value="P">PRODUCAO</ion-select-option>
             <ion-select-option value="H">HOMOLOGACAO</ion-select-option>
             </ion-select>
         </ion-item> 
-        <ion-button expand="full">Conectar</ion-button>
+        <ion-button shape="round" fill="solid" color="light">CONECTAR</ion-button>
+       
     </div>
     </div>
 </ion-content>
