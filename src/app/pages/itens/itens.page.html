@@ -10,17 +10,16 @@
 </ion-header>
 
 <ion-content>
-        <ion-item lines="full">
-                <ion-label text-wrap>
-                    <h1><b>Orç.: 33118818</b></h1>
-                    <p>{{itens.length}} Itens | Total: <b> R$ 2.400,00 </b></p>
-                </ion-label>
-                
-                <ion-button (click)="showMenu()" expand="full">
-                    Ordernar
-                    <ion-icon slot="start" name="funnel"></ion-icon>
-                </ion-button>
-            </ion-item>
+    <ion-item lines="full">
+        <ion-label text-wrap>
+            <h1><b>Orç.: 33118818</b></h1>
+            <p>{{itens.length}} Itens | Total: <b> R$ 2.400,00 </b></p>
+        </ion-label>
+        <ion-button (click)="showMenu($event)" expand="full">
+            Ordernar
+            <ion-icon slot="start" name="funnel"></ion-icon>
+        </ion-button>
+    </ion-item>
     <ion-searchbar showCancelButton placeholder="Buscar"></ion-searchbar>
     <ion-fab vertical="bottom" horizontal="end" slot="fixed">
         <ion-fab-button (click)="fabClick()" color="secondary">
