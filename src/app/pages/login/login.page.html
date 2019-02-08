@@ -2,23 +2,24 @@
     <div class="corpo">
         <div class="espaco"></div>
         <div class="topo">
-        <ion-item> 
-            <ion-label position="fixed">Usuário</ion-label>
-            <ion-input name="razaoSocial" type="text"></ion-input>
-        </ion-item>  
-        <ion-item>
-            <ion-label position="fixed">Senha</ion-label>
-            <ion-input name="cep" type="password" ></ion-input>
-        </ion-item>   
-        <ion-item class="selecao">
-            <ion-label position="floating">Ambiente</ion-label>
-            <ion-select>
-            <ion-select-option selected value="P">PRODUCAO</ion-select-option>
-            <ion-select-option value="H">HOMOLOGACAO</ion-select-option>
-            </ion-select>
-        </ion-item> 
-        <ion-button shape="round" fill="solid" color="light" float-right  (click)="loginClick()">CONECTAR</ion-button>
-       
-    </div>
+            <ion-item lines="none">
+                <ion-label position="fixed">Usuário</ion-label>
+                <ion-input style="background: #FFFF; color: black;" name="user" type="text"></ion-input>
+            </ion-item>
+            <ion-item lines="none">
+                <ion-label position="fixed">Senha</ion-label>
+                <ion-input style="background: #FFFF; color: black;" name="password" type="password"></ion-input>
+            </ion-item>
+            <ion-item class="selecao" lines="none">
+                <ion-label position="fixed">Ambiente</ion-label>
+                <ion-select>
+                    <ion-select-option selected value="P">PRODUCAO</ion-select-option>
+                    <ion-select-option value="H">HOMOLOGACAO</ion-select-option>
+                </ion-select>
+            </ion-item>
+            <ion-button shape="round" fill="solid" color="light" float-right (click)="loginClick()">
+                CONECTAR
+            </ion-button>
+        </div>
     </div>
 </ion-content>

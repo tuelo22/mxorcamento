@@ -4,25 +4,41 @@
             <ion-back-button></ion-back-button>
         </ion-buttons>
         <ion-title>
-            Orçamento: 33118818
+            Orçamento
         </ion-title>
     </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-    <ion-fab vertical="top" horizontal="end" slot="fixed">
-        <ion-fab-button (click)="fabClick()" color="secondary">
-            <ion-icon name="list-box"></ion-icon>
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button color="secondary">
+            <ion-icon name="apps"></ion-icon>
         </ion-fab-button>
+        <ion-fab-list side="top">
+            <ion-fab-button (click)="fabClick()" color="secondary">
+                <ion-icon name="list-box"></ion-icon>
+            </ion-fab-button>
+            <ion-fab-button color="secondary">
+                <ion-icon name="calculator"></ion-icon>
+            </ion-fab-button>
+        </ion-fab-list>
     </ion-fab>
-
-    <ion-item>
+    <ion-item lines="full">
+        <ion-label>
+            <h1><b>Nº: 33118818</b></h1>
+        </ion-label>
+        <ion-button expand="full" (click)="versaoClick()"> 
+            Versão | 6
+            <ion-icon slot="start" name="arrow-round-up"></ion-icon>
+            <ion-icon slot="start" name="arrow-round-down"></ion-icon>
+        </ion-button>
+    </ion-item>
+    <ion-item lines="full">
         <ion-label><b>Valor Total: </b> R$ 2.400,00 </ion-label>
     </ion-item>
-    <ion-item>
+    <ion-item lines="full">
         <ion-label><b>Status: </b>Em Aprovação</ion-label>
     </ion-item>
-    <br>
     <ion-item>
         <ion-label position="stacked">Cliente</ion-label>
         <ion-input name="cliente" type="text" value="Hospital de Clinicas de Niterói"></ion-input>
@@ -31,7 +47,8 @@
 
     <ion-item>
         <ion-label position="stacked">Endereço de Entrega</ion-label>
-        <ion-input name="enderecoEntrega" type="text" value="Rua La Salle, 12 - Centro, Niterói - RJ, 24020-096"></ion-input>
+        <ion-input name="enderecoEntrega" type="text" value="Rua La Salle, 12 - Centro, Niterói - RJ, 24020-096">
+        </ion-input>
         <ion-icon name="search" slot="end"></ion-icon>
     </ion-item>
 
@@ -49,13 +66,13 @@
     <ion-grid>
         <ion-row>
             <ion-col size="6">
-                <ion-item>
+                <ion-item lines="full">
                     <ion-label position="stacked">Validade</ion-label>
                     <ion-input name="validade" type="text" value="01/12/2019"></ion-input>
                 </ion-item>
             </ion-col>
             <ion-col size="6">
-                <ion-item>
+                <ion-item lines="full">
                     <ion-label position="floating">Dias entrega</ion-label>
                     <ion-input name="diasEntrega" type="text" value="15"></ion-input>
                 </ion-item>
@@ -66,21 +83,25 @@
         <ion-label position="floating">Valor do Frete</ion-label>
         <ion-input name="valorFrete" type="text" value="0,00"></ion-input>
     </ion-item>
+    <ion-item>
+        <ion-label position="floating">Observações</ion-label>
+        <ion-textarea name="observacoes" rows="3" cols="1"></ion-textarea>
+    </ion-item>
 </ion-content>
 <ion-footer>
     <ion-toolbar color="primary">
         <ion-buttons slot="start">
-            <ion-button color="light">
-                <ion-icon slot="start" name="calculator"></ion-icon>
-                Impostos
-            </ion-button>
             <ion-button color="success">
                 <ion-icon slot="start" name="save"></ion-icon>
                 Salvar
             </ion-button>
+            <ion-button color="light">
+                <ion-icon slot="start" name="arrow-round-up"></ion-icon>
+                Versão
+            </ion-button>
             <ion-button color="warning">
                 <ion-icon slot="start" name="add"></ion-icon>
-                Reutilizar 
+                Reutilizar
             </ion-button>
         </ion-buttons>
     </ion-toolbar>

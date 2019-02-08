@@ -15,4 +15,7 @@ export class OrcamentoEditarPage implements OnInit {
   fabClick(){
     this.navCtrl.navigateForward('itens');
   }
+  versaoClick(){
+    this.navCtrl.navigateForward('orcamento-versao');
+  }
 }

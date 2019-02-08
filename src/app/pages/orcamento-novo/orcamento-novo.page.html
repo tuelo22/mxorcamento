@@ -10,13 +10,20 @@
 </ion-header>
 
 <ion-content padding>
-    <ion-fab vertical="top" horizontal="end" slot="fixed">
-        <ion-fab-button color="secondary" disabled>
-            <ion-icon name="list-box"></ion-icon>
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button color="secondary">
+            <ion-icon name="apps"></ion-icon>
         </ion-fab-button>
+        <ion-fab-list side="top">
+            <ion-fab-button disabled color="secondary">
+                <ion-icon name="list-box"></ion-icon>
+            </ion-fab-button>
+            <ion-fab-button disabled color="secondary">
+                <ion-icon name="calculator"></ion-icon>
+            </ion-fab-button>
+        </ion-fab-list>
     </ion-fab>
-    <br>
-    <ion-item>
+    <ion-item lines="full">
         <ion-label><b>Valor Total: </b> R$ 00,00 </ion-label>
     </ion-item>
     <br>
@@ -63,16 +70,14 @@
         <ion-label position="floating">Valor do Frete</ion-label>
         <ion-input name="valorFrete" type="number"></ion-input>
     </ion-item>
+    <ion-item>
+        <ion-label position="floating">Observações</ion-label>
+        <ion-textarea name="observacoes" rows="3" cols="1"></ion-textarea>
+    </ion-item>
 </ion-content>
 <ion-footer>
     <ion-toolbar color="primary">
         <ion-buttons slot="start">
-            <ion-button color="light" disabled>
-                <ion-icon slot="start" name="calculator"></ion-icon>
-                Impostos
-            </ion-button>
-        </ion-buttons>
-        <ion-buttons slot="secondary">
             <ion-button color="success" disabled>
                 <ion-icon slot="start" name="save"></ion-icon>
                 Salvar
