@@ -1,23 +1,23 @@
 <ion-header>
     <ion-toolbar color="primary">
         <ion-buttons slot="start">
-          <ion-back-button></ion-back-button>
+            <ion-back-button></ion-back-button>
         </ion-buttons>
         <ion-title>
             Novo Endereço
         </ion-title>
     </ion-toolbar>
-  </ion-header>
+</ion-header>
 
 <ion-content padding>
     <ion-item>
         <ion-label position="floating">Descrição</ion-label>
         <ion-input name="descricao" type="text"></ion-input>
-    </ion-item>  
+    </ion-item>
     <ion-item>
         <ion-label position="floating">Razão Social</ion-label>
         <ion-input name="razaoSocial" type="text"></ion-input>
-    </ion-item>  
+    </ion-item>
     <ion-item>
         <ion-label position="floating">CEP</ion-label>
         <ion-input name="cep" type="number"></ion-input>
@@ -33,52 +33,58 @@
     <ion-item>
         <ion-label position="floating">Complemento</ion-label>
         <ion-input name="complemento" type="text"></ion-input>
-    </ion-item> 
+    </ion-item>
     <ion-item>
         <ion-label position="floating">Bairro</ion-label>
         <ion-input name="bairro" type="text"></ion-input>
-    </ion-item> 
+    </ion-item>
     <ion-item>
         <ion-label position="floating">Cidade</ion-label>
         <ion-input name="cidade" type="text"></ion-input>
-        <ion-icon name="search" slot="start"></ion-icon>
-    </ion-item>  
+        <ion-icon name="search" slot="end"></ion-icon>
+    </ion-item>
     <ion-item>
         <ion-label position="floating">País</ion-label>
         <ion-input name="pais" type="text"></ion-input>
-        <ion-icon name="search" slot="start"></ion-icon>
+        <ion-icon name="search" slot="end"></ion-icon>
     </ion-item>
     <ion-item>
         <ion-label position="floating">Telefone</ion-label>
         <ion-input name="telefone" type="number"></ion-input>
-    </ion-item> 
+    </ion-item>
     <ion-item>
         <ion-label>Indicador da IE</ion-label>
         <ion-select>
-          <ion-select-option value="I">Isento</ion-select-option>
-          <ion-select-option value="T">Contribuinte</ion-select-option>
-          <ion-select-option value="N">Não Contribuinte</ion-select-option>
+            <ion-select-option value="I">Isento</ion-select-option>
+            <ion-select-option value="T">Contribuinte</ion-select-option>
+            <ion-select-option value="N">Não Contribuinte</ion-select-option>
         </ion-select>
-    </ion-item>    
+    </ion-item>
     <ion-item>
         <ion-label position="floating">Incrição Estadual</ion-label>
         <ion-input name="inscriçãoEstadual" type="number"></ion-input>
-    </ion-item> 
+    </ion-item>
     <ion-item>
         <ion-label position="floating">Incrição Suframa</ion-label>
         <ion-input name="inscricaoSuframa" type="number"></ion-input>
-    </ion-item> 
+    </ion-item>
     <ion-item>
         <ion-label position="floating">Incrição Municipal</ion-label>
         <ion-input name="incricaoMunicipal" type="number"></ion-input>
-    </ion-item> 
+    </ion-item>
     <ion-item>
         <ion-label position="floating">Região</ion-label>
         <ion-input name="regiao" type="text"></ion-input>
-        <ion-icon name="search" slot="start"></ion-icon>
+        <ion-icon name="search" slot="end"></ion-icon>
     </ion-item>
-    <br>
-    <ion-button expand="full">
-        <ion-icon name="save" slot="start"></ion-icon> Salvar
-    </ion-button>
 </ion-content>
+<ion-footer>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-button color="success" disabled>
+                <ion-icon slot="start" name="save"></ion-icon>
+                Salvar
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-footer>

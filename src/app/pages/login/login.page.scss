@@ -1,20 +1,24 @@
 ion-content{
     --padding-top: 90px;
+    --color:#f1f1f1;
 }
 
-.menu{
+.corpo{
     background: url(src\assets\login.png);
     max-width: 416px;
     height: 354px;
-    padding-top: 75px;
-    background-size: cover;
+    background-size: 100% 354px;
+    background-repeat:no-repeat;
     margin:auto;
+}
+.espaco{
+    height: 110px;
 }
 .topo{
     padding: 5px;
 }
 
-ion-item, ion-item-divider{
+ion-item{
     --background:transparent;
     --color:#FFF;
     --highlight-color-focused:#FFF;

@@ -8,6 +8,8 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ComponetPopoverOrdernarItensComponent } from './componet-popover-ordernar-itens/componet-popover-ordernar-itens.component';
+
 
 @NgModule({
   declarations: [AppComponent],

@@ -18,8 +18,8 @@ const routes: Routes = [
   { path: 'item-editar', loadChildren: './pages/item-editar/item-editar.module#ItemEditarPageModule' },
   { path: 'endereco-novo', loadChildren: './pages/endereco-novo/endereco-novo.module#EnderecoNovoPageModule' },
   { path: 'endereco-editar', loadChildren: './pages/endereco-editar/endereco-editar.module#EnderecoEditarPageModule' },
-  { path: 'orcamentos', loadChildren: './orcamentos/orcamentos.module#OrcamentosPageModule' },
-  { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
+  { path: 'orcamentos', loadChildren: './pages/orcamentos/orcamentos.module#OrcamentosPageModule' },
+  { path: 'login', loadChildren: './pages/login/login.module#LoginPageModule' },
 
 ];
 

@@ -1,51 +1,61 @@
 <ion-header>
-  <ion-toolbar color="primary">
-      <ion-buttons slot="start">
-        <ion-back-button></ion-back-button>
-      </ion-buttons>
-      <ion-title>
-          Novo Item
-      </ion-title>
-  </ion-toolbar>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            Novo Item
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
     <ion-item>
         <ion-label position="floating">Código do Item</ion-label>
         <ion-input name="codigoItem" type="text"></ion-input>
-        <ion-icon name="search" slot="start"></ion-icon>
-    </ion-item>    
+        <ion-icon name="search" slot="end"></ion-icon>
+    </ion-item>
     <ion-item>
         <ion-label position="floating">Descrição</ion-label>
         <ion-input name="codigoItem" type="text" disabled></ion-input>
-    </ion-item>  
+    </ion-item>
     <ion-item>
         <ion-label position="floating">Unidade</ion-label>
         <ion-input name="unidade" type="text"></ion-input>
-        <ion-icon name="search" slot="start"></ion-icon>
-    </ion-item>    
+        <ion-icon name="search" slot="end"></ion-icon>
+    </ion-item>
     <ion-item>
         <ion-label position="floating">Tabela de Preço</ion-label>
         <ion-input name="tabelaPreco" type="text"></ion-input>
-        <ion-icon name="search" slot="start"></ion-icon>
-    </ion-item>  
+        <ion-icon name="search" slot="end"></ion-icon>
+    </ion-item>
     <ion-item>
         <ion-label position="floating">Preço</ion-label>
         <ion-input name="preco" type="number"></ion-input>
-    </ion-item>    
+    </ion-item>
     <ion-item>
         <ion-label position="floating">% Desconto</ion-label>
         <ion-input name="preco" type="number" mim="0" max="100"></ion-input>
-    </ion-item>      
+    </ion-item>
     <ion-item>
         <ion-label position="floating">Quantidade</ion-label>
         <ion-input name="diasEntrega" type="number"></ion-input>
-    </ion-item>   
-    <ion-item>
-        <b>Total: </b>R$ 00,00
     </ion-item>
-    <br>
-    <ion-button expand="full">
-        <ion-icon name="save" slot="start"></ion-icon> Salvar
-    </ion-button>
+    <ion-item style="--padding-start: 0px">
+        <ion-label style="padding-left: 16px"><b>Total: </b>R$ 00,00</ion-label>
+    </ion-item>
 </ion-content>
+<ion-footer>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-button color="danger" disable>
+                <ion-icon slot="start" name="calculator"></ion-icon>
+                Impostos
+            </ion-button>
+            <ion-button color="success" disable>
+                <ion-icon slot="start" name="save"></ion-icon>
+                Salvar
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-footer>

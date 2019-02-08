@@ -1,7 +1,7 @@
 <ion-header>
     <ion-toolbar color="primary">
         <ion-buttons slot="start">
-          <ion-back-button></ion-back-button>
+            <ion-back-button></ion-back-button>
         </ion-buttons>
         <ion-title>
             Itens
@@ -9,53 +9,74 @@
     </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-    <ion-fab  vertical="bottom" horizontal="end" slot="fixed">
-        <ion-fab-button (click)="fabClick()">
+<ion-content>
+        <ion-item lines="full">
+                <ion-label text-wrap>
+                    <h1><b>Orç.: 33118818</b></h1>
+                    <p>{{itens.length}} Itens | Total: <b> R$ 2.400,00 </b></p>
+                </ion-label>
+                
+                <ion-button (click)="showMenu()" expand="full">
+                    Ordernar
+                    <ion-icon slot="start" name="funnel"></ion-icon>
+                </ion-button>
+            </ion-item>
+    <ion-searchbar showCancelButton placeholder="Buscar"></ion-searchbar>
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button (click)="fabClick()" color="secondary">
             <ion-icon name="add"></ion-icon>
         </ion-fab-button>
     </ion-fab>
-
-    <ion-card *ngFor="let item of itens" color ="light" (click)="editItemClick()">
-        <ion-card-header>
-               <ion-item color="light"> 
-                       <ion-icon name="cube" slot="start"></ion-icon>          
-                       <ion-label>{{item.codigo}}</ion-label>
-                       <ion-button fill="clear" slot="end" color="dark">
-                              <ion-icon name="close-circle"></ion-icon>
+    <ion-grid>
+        <ion-row wrap>
+            <ion-col size="12" size-md="6" *ngFor="let item of itens">
+                <ion-card>
+                    <ion-toolbar color="primary">
+                        <ion-title>{{item.sequencia}} | {{item.codigo}}</ion-title>
+                        <ion-buttons slot="end">
+                            <ion-button fill="clear" (click)="editItemClick()">
+                                <ion-icon color="light" slot="icon-only" name="create"></ion-icon>
                             </ion-button>
-                   </ion-item>
-        </ion-card-header>
-        <ion-card-content>
-                <ion-grid>
-                    <ion-row size="12">
-                        <ion-col><h2><b>{{item.descricao}}</b></h2></ion-col> 
-                    </ion-row>
-                    <ion-row>
-                        <ion-col ><b>Unidade: </b></ion-col> 
-                        <ion-col >{{item.unidade}}</ion-col> 
-                    </ion-row>
-                    <ion-row>
-                        <ion-col ><b>Quantidade: </b></ion-col> 
-                        <ion-col >{{item.quantidade}}</ion-col> 
-                    </ion-row>
-                    <ion-row>
-                        <ion-col ><b>Tabela de Preços: </b></ion-col> 
-                        <ion-col >{{item.tabelaPreco}}</ion-col> 
-                    </ion-row>
-                    <ion-row>
-                        <ion-col ><b>Preço: </b></ion-col> 
-                        <ion-col >{{item.preco}}</ion-col> 
-                    </ion-row>
-                    <ion-row>
-                        <ion-col ><b>% Desconto: </b></ion-col> 
-                        <ion-col >{{item.percentualDesconto}}</ion-col> 
-                    </ion-row>
-                    <ion-row>
-                        <ion-col ><b>Total: </b></ion-col> 
-                        <ion-col >{{item.total}}</ion-col> 
-                    </ion-row>
-                </ion-grid>
-        </ion-card-content>
-    </ion-card>
+                            <ion-button fill="clear">
+                                <ion-icon color="danger" slot="icon-only" name="close-circle"></ion-icon>
+                            </ion-button>
+                        </ion-buttons>
+                    </ion-toolbar>
+                    <ion-card-content>
+                        <ion-grid>
+                            <ion-row size="12">
+                                <ion-col>
+                                    <h2><b>{{item.descricao}}</b></h2>
+                                </ion-col>
+                            </ion-row>
+                            <ion-row>
+                                <ion-col>Unidade:</ion-col>
+                                <ion-col><b>{{item.unidade}}</b></ion-col>
+                            </ion-row>
+                            <ion-row>
+                                <ion-col>Quantidade:</ion-col>
+                                <ion-col><b>{{item.quantidade}}</b></ion-col>
+                            </ion-row>
+                            <ion-row>
+                                <ion-col>Tabela de Preços:</ion-col>
+                                <ion-col><b>{{item.tabelaPreco}}</b></ion-col>
+                            </ion-row>
+                            <ion-row>
+                                <ion-col>Preço:</ion-col>
+                                <ion-col><b>{{item.preco}}</b></ion-col>
+                            </ion-row>
+                            <ion-row>
+                                <ion-col>% Desconto:</ion-col>
+                                <ion-col><b>{{item.percentualDesconto}}</b></ion-col>
+                            </ion-row>
+                            <ion-row>
+                                <ion-col>Total:</ion-col>
+                                <ion-col><b>{{item.total}}</b></ion-col>
+                            </ion-row>
+                        </ion-grid>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
 </ion-content>

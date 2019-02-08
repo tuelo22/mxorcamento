@@ -7,12 +7,12 @@
         </ion-toolbar>
       </ion-header>
       <ion-content>
-        <ion-list>
-          <ion-item>
+        <ion-list style="padding: 0px">
+          <ion-item color="primary">
               <ion-avatar  slot="start">
                   <img src="assets/user.png">
                 </ion-avatar>
-                <ion-label>
+                <ion-label style="--color:#f1f1f1;">
                   <h2>Carlos da Silva</h2> 
                   <p class="subtitle">Vendedor</p> 
                   <p class="subtitle">E. Tamussino</p>
@@ -28,6 +28,11 @@
           </ion-menu-toggle>
         </ion-list>
       </ion-content>
+      <ion-footer style="margin-top:5px; border-top: 5px solid #f4de48;">
+          <ion-toolbar color="primary">
+            <ion-title><img src="assets/logo-mxm-branca.png" width="90"></ion-title>
+          </ion-toolbar>
+        </ion-footer>
     </ion-menu>
     <ion-router-outlet main></ion-router-outlet>
   </ion-split-pane>

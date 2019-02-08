@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController } from '@ionic/angular';
+import { NavController, PopoverController } from '@ionic/angular';
+import { ComponetPopoverOrdernarItensComponent } from 'src/app/componet-popover-ordernar-itens/componet-popover-ordernar-itens.component';
 
 @Component({
   selector: 'app-itens',
@@ -8,10 +9,11 @@ import { NavController } from '@ionic/angular';
 })
 export class ItensPage implements OnInit {
 
-  constructor(private navCtrl : NavController) { }
+  constructor(private navCtrl : NavController, private popoverCtrl: PopoverController) { }
 
   public itens = [
     {
+      sequencia:'1',
       codigo:'G00166',
       descricao:'Percutaneous Entry Needle Cook® 18 Gauge 7 cm',
       unidade:'PC',
@@ -22,6 +24,7 @@ export class ItensPage implements OnInit {
       total:'R$ 700,00'
     },
     {
+      sequencia:'2',
       codigo:'869623',
       descricao:'Light Handle Cover McKesson',
       unidade:'PC',
@@ -41,5 +44,14 @@ export class ItensPage implements OnInit {
   }
   editItemClick(){
     this.navCtrl.navigateForward('item-editar');
+  }
+  async showMenu(event: any){
+    let popover = await this.popoverCtrl.create({
+      component: ComponetPopoverOrdernarItensComponent,
+      event: event,
+      animated: true
+    });
+
+    return await popover.present();
   }
 }

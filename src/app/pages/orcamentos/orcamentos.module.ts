@@ -6,6 +6,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { OrcamentosPage } from './orcamentos.page';
+import { ComponentPopoverOrdernarComponent } from 'src/app/component-popover-ordernar/component-popover-ordernar.component';
+
 
 const routes: Routes = [
   {
@@ -21,6 +23,7 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [OrcamentosPage]
+  declarations: [OrcamentosPage, ComponentPopoverOrdernarComponent],
+  entryComponents: [ComponentPopoverOrdernarComponent]
 })
 export class OrcamentosPageModule {}

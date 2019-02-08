@@ -1,90 +1,62 @@
 <ion-header>
     <ion-toolbar color="primary">
-      <ion-buttons slot="start">
-        <ion-menu-button></ion-menu-button>
-      </ion-buttons>
-      <ion-buttons slot="secondary">
-        <ion-button>
-          <ion-icon slot="icon-only" name="funnel"></ion-icon>
-        </ion-button>
-      </ion-buttons>
-      <ion-title>
-        Orçamentos
-      </ion-title>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            Orçamentos
+        </ion-title>
     </ion-toolbar>
-  </ion-header>
+</ion-header>
 
 <ion-content>
-    <ion-searchbar showCancelButton placeholder="Buscar"></ion-searchbar>
-    <ion-card  color ="warning"  (click)="cardClick()">
-         <ion-card-header>
-                <ion-item color="warning">        
-                        <ion-label><b>Nº:</b> 33118818</ion-label>
-                        <ion-button fill="clear" slot="end" color="dark">
-                               <ion-icon name="close-circle"></ion-icon>
-                             </ion-button>
-                    </ion-item>
-         </ion-card-header>
-         <ion-card-content>
-                 <ion-grid>
-                     <ion-row size="12">
-                         <ion-col><h2><b>Hospital das Clinicas de Niteroi</b></h2></ion-col> 
-                     </ion-row>
-                     <ion-row size="12">
-                         <ion-col><b>Em Aprovação</b></ion-col> 
-                     </ion-row>
-                     <ion-row>
-                         <ion-col ><b>Criação: </b></ion-col> 
-                         <ion-col >20/02/2019</ion-col> 
-                     </ion-row>
-                     <ion-row>
-                         <ion-col ><b>Vencimento: </b></ion-col> 
-                         <ion-col >01/12/2019</ion-col> 
-                     </ion-row>
-                     <ion-row>
-                         <ion-col ><b>Valor: </b></ion-col> 
-                         <ion-col >R$ 2400,00</ion-col> 
-                     </ion-row>
-                 </ion-grid>
-         </ion-card-content>
-     </ion-card>
+    <ion-searchbar showCancelButton placeholder="Buscar Orçamentos"></ion-searchbar>
+    <div padding>
+        <ion-item style="font-weight: bold;">
+            <ion-select>
+                <ion-select-option value="2019" selected>2019</ion-select-option>
+                <ion-select-option value="2018" selected>2018</ion-select-option>
+            </ion-select>
+            <ion-select>
+                <ion-select-option value="J">Janeiro</ion-select-option>
+                <ion-select-option value="F" selected>Fevereiro</ion-select-option>
+            </ion-select>
+        </ion-item>
+        <h3 style="text-align:center">Números do Período</h3>
+        <div style="display: block;">
+            <canvas baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [colors]="chartColors"
+                [chartType]="doughnutChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"
+                [options]="barChartOptions"></canvas>
+        </div>
+    </div>
+    <ion-card>
+        <ion-card-header>
+            <ion-card-title>Valores Movimentados</ion-card-title>
+        </ion-card-header>
 
-     <ion-card  color ="success">
-            <ion-card-header>
-                   <ion-item color="success">           
-                           <ion-label><b>Nº:</b> 33118817</ion-label>
-                   </ion-item>
-            </ion-card-header>
-            <ion-card-content>
-                    <ion-grid>
-                        <ion-row size="12">
-                            <ion-col><h2><b>Hospital das Clinicas de Niteroi</b></h2></ion-col> 
-                        </ion-row>
-                        <ion-row size="12">
-                            <ion-col><b>Aprovado</b></ion-col> 
-                        </ion-row>
-                        <ion-row>
-                            <ion-col ><b>Pedido: </b></ion-col> 
-                            <ion-col >656456</ion-col> 
-                        </ion-row>
-                        <ion-row>
-                            <ion-col ><b>Criação: </b></ion-col> 
-                            <ion-col >20/02/2019</ion-col> 
-                        </ion-row>
-                        <ion-row>
-                            <ion-col ><b>Vencimento: </b></ion-col> 
-                            <ion-col >01/12/2019</ion-col> 
-                        </ion-row>
-                        <ion-row>
-                            <ion-col ><b>Valor: </b></ion-col> 
-                            <ion-col >R$ 2400,00</ion-col> 
-                        </ion-row>
-                    </ion-grid>
-            </ion-card-content>
-        </ion-card>
-
-    <ion-fab  vertical="bottom" horizontal="end" slot="fixed">
-        <ion-fab-button (click)="fabClick()">
+        <ion-card-content>
+            <ion-grid>
+                <ion-row>
+                    <ion-col>Em Aprovação</ion-col>
+                    <ion-col><b>R$ 1.345,00</b></ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>Aprovados</ion-col>
+                    <ion-col><b>R$ 13.456,30</b></ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>Faturados</ion-col>
+                    <ion-col><b>R$ 22.963,79</b></ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>Cancelado</ion-col>
+                    <ion-col><b>R$ 500,79</b></ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-card-content>
+    </ion-card>
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button (click)="fabClick()" color="secondary">
             <ion-icon name="add"></ion-icon>
         </ion-fab-button>
     </ion-fab>

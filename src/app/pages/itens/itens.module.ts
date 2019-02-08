@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { ItensPage } from './itens.page';
+import { ComponetPopoverOrdernarItensComponent } from 'src/app/componet-popover-ordernar-itens/componet-popover-ordernar-itens.component';
 
 const routes: Routes = [
   {
@@ -13,7 +14,7 @@ const routes: Routes = [
     component: ItensPage
   }
 ];
-
+ 
 @NgModule({
   imports: [
     CommonModule,
@@ -21,6 +22,7 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [ItensPage]
+  declarations: [ItensPage, ComponetPopoverOrdernarItensComponent],
+  entryComponents: [ComponetPopoverOrdernarItensComponent]
 })
 export class ItensPageModule {}
