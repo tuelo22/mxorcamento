@@ -6,7 +6,7 @@
   "scripts": {
     "ng": "ng",
     "postinstall": "ng b --prod",
-    "start": "ng serve.js",
+    "start": "ng server.js",
     "build": "ng build --prod",
     "start-public": "ng serve --host 0.0.0.0 --port 4300 --disable-hc",
     "test": "ng test",
