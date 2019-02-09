@@ -1,23 +1,31 @@
-var express  = require('express');
-var app      = express();                               
-var morgan = require('morgan');            
-var bodyParser = require('body-parser');    
-var cors = require('cors');
- 
-app.use(morgan('dev'));                                        
-app.use(bodyParser.urlencoded({'extended':'true'}));            
-app.use(bodyParser.json());                                     
-app.use(cors());
- 
-app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header('Access-Control-Allow-Methods', 'DELETE, PUT');
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
+const express = require('express');
+const path = require('path');
+const compression = require('compression');
+
+const app = express();
+
+app.use(compression());
+
+// FORCE HTTPS
+const forceSSL = function () {
+  return function (req, res, next) {
+    if (req.headers['x-forwarded-proto'] !== 'https') {
+      return res.redirect(
+        ['https://', req.get('Host'), req.url].join('')
+      );
+    }
+    next();
+  }
+}
+app.use(forceSSL());
+
+
+// Serve only the static files form the dist directory
+app.use(express.static('www') );
+
+app.get('*', function (req, res, next) {
+  res.sendFile(path.resolve('dist/index.html'));
 });
- 
-app.use(express.static('www'));
-app.set('port', process.env.PORT || 5000);
-app.listen(app.get('port'), function () {
-  console.log('Express server listening on port ' + app.get('port'));
-});
+
+// Start the app by listening on the default Heroku port
+app.listen(process.env.PORT || 3000);

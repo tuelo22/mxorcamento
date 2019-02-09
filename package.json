@@ -6,7 +6,7 @@
   "scripts": {
     "ng": "ng",
     "postinstall": "ng b --prod",
-    "start": "ng server.js",
+    "start": "node server.js",
     "build": "ng build --prod",
     "start-public": "ng serve --host 0.0.0.0 --port 4300 --disable-hc",
     "test": "ng test",
@@ -15,7 +15,6 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/cli": "~7.1.4",
     "@angular/common": "~7.1.4",
     "@angular/compiler": "~7.1.4",
     "@angular/compiler-cli": "~7.1.4",
@@ -31,6 +30,7 @@
     "@ionic/angular": "4.0.0-rc.1",
     "ajv": "^6.8.1",
     "chart.js": "^2.7.3",
+    "compression": "^1.7.3",
     "core-js": "^2.5.4",
     "express": "^4.16.4",
     "ng2-charts": "^1.6.0",
@@ -43,7 +43,7 @@
     "@angular-devkit/build-angular": "^0.13.0",
     "@angular-devkit/core": "~7.1.4",
     "@angular-devkit/schematics": "~7.1.4",
-    "@angular/cli": "~7.1.4",
+    "@angular/cli": "7.1.4",
     "@angular/compiler": "~7.1.4",
     "@angular/compiler-cli": "~7.1.4",
     "@angular/language-service": "~7.1.4",
@@ -65,7 +65,7 @@
     "typescript": "~3.1.6"
   },
   "engines": {
-    "node": "10.15.0",
+    "node": "11.3.0",
     "npm": "6.4.1"
   },
   "description": "An Ionic project"
