@@ -1,18 +1,18 @@
 ion-content{
-    --padding-top: 90px;
+    --padding-top: 10%;
     --color:#f1f1f1;
 }
 
 .corpo{
     background: url(src\assets\login.png);
-    max-width: 416px;
-    height: 354px;
-    background-size: 100% 354px;
+    max-width: 343px;
+    height: 292px;
+    background-size: 100% 292px;
     background-repeat:no-repeat;
     margin:auto;
 }
 .espaco{
-    height: 110px;
+    height: 90px;
 }
 .topo{
     padding: 5px;
@@ -22,8 +22,8 @@ ion-item{
     --background:transparent;
     --color:#FFF;
     --highlight-color-focused:#FFF;
-    padding-left: 0px;
-    margin-left: 0px;
+    --padding-left: 0px;
+    margin-top: 5px;
 }
 
 ion-item ion-label{
@@ -35,4 +35,7 @@ ion-button{
     margin-top: 16px;
     margin-left: 16px;   
     --border-radius: 0;
+}
+ion-select{
+  max-width: 100%;
 }
