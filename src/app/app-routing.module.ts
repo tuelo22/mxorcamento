@@ -19,7 +19,8 @@ const routes: Routes = [
   { path: 'endereco-editar', loadChildren: './pages/endereco-editar/endereco-editar.module#EnderecoEditarPageModule' },
   { path: 'orcamentos', loadChildren: './pages/orcamentos/orcamentos.module#OrcamentosPageModule' },
   { path: 'login', loadChildren: './pages/login/login.module#LoginPageModule' },
-  { path: 'orcamento-versao', loadChildren: './pages/orcamento-versao/orcamento-versao.module#OrcamentoVersaoPageModule' },
+  { path: 'orcamento-versao', loadChildren: './pages/orcamento-versao/orcamento-versao.module#OrcamentoVersaoPageModule' },  { path: 'itens-vazio', loadChildren: './itens-vazio/itens-vazio.module#ItensVazioPageModule' },
+
 
 
 ];

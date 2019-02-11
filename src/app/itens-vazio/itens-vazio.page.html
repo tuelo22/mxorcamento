@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>
+          Itens
+      </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item lines="full">
+      <ion-label text-wrap>
+          
+          <p>0 Itens | Total: <b> R$ 00,00 </b></p>
+      </ion-label>
+      <ion-button (click)="showMenu($event)" expand="full">
+          Ordenar
+          <ion-icon slot="start" name="funnel"></ion-icon>
+      </ion-button>
+  </ion-item>
+  <ion-searchbar showCancelButton placeholder="Buscar"></ion-searchbar>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button (click)="fabClick()" color="secondary">
+          <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+  </ion-fab>
+</ion-content>
