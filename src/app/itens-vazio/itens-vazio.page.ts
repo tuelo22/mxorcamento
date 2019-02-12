@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController, PopoverController } from '@ionic/angular';
-import { ComponetPopoverOrdernarItensComponent } from '../componet-popover-ordernar-itens/componet-popover-ordernar-itens.component';
 
 @Component({
   selector: 'app-itens-vazio',
@@ -9,7 +8,7 @@ import { ComponetPopoverOrdernarItensComponent } from '../componet-popover-order
 })
 export class ItensVazioPage implements OnInit {
 
-  constructor(private navCtrl : NavController, private popoverCtrl: PopoverController) { }
+  constructor(private navCtrl : NavController) { }
 
   ngOnInit() {
   }
@@ -19,14 +18,5 @@ export class ItensVazioPage implements OnInit {
   }
   editItemClick(){
     this.navCtrl.navigateForward('item-editar');
-  }
-  async showMenu(event: any){
-    let popover = await this.popoverCtrl.create({
-      component: ComponetPopoverOrdernarItensComponent,
-      event: event,
-      animated: true
-    });
-
-    return await popover.present();
   }
 }

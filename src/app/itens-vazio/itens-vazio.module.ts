@@ -6,7 +6,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { ItensVazioPage } from './itens-vazio.page';
-import { ComponetPopoverOrdernarItensComponent } from '../componet-popover-ordernar-itens/componet-popover-ordernar-itens.component';
 
 const routes: Routes = [
   {
@@ -22,7 +21,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [ItensVazioPage, ComponetPopoverOrdernarItensComponent],
-  entryComponents: [ComponetPopoverOrdernarItensComponent]
+  declarations: [ItensVazioPage],
 })
 export class ItensVazioPageModule {}
