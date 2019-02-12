@@ -16,4 +16,7 @@ export class OrcamentoNovoPage implements OnInit {
   fabClick(){
     this.navCtrl.navigateForward('itens-vazio');
   }
+  impostoClick(){
+    this.navCtrl.navigateForward('impostos');
+  }
 }

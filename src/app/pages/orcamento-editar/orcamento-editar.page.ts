@@ -18,4 +18,7 @@ export class OrcamentoEditarPage implements OnInit {
   versaoClick(){
     this.navCtrl.navigateForward('orcamento-versao');
   }
+  impostoClick(){
+    this.navCtrl.navigateForward('impostos');
+  }
 }

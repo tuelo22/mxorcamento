@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-item-editar',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ItemEditarPage implements OnInit {
 
-  constructor() { }
+  constructor(private navCtrl : NavController) { }
 
   ngOnInit() {
+  }
+
+  impostoClick(){
+    this.navCtrl.navigateForward('impostos');
   }
 
 }

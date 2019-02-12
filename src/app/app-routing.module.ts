@@ -20,6 +20,7 @@ const routes: Routes = [
   { path: 'orcamentos', loadChildren: './pages/orcamentos/orcamentos.module#OrcamentosPageModule' },
   { path: 'login', loadChildren: './pages/login/login.module#LoginPageModule' },
   { path: 'orcamento-versao', loadChildren: './pages/orcamento-versao/orcamento-versao.module#OrcamentoVersaoPageModule' },  { path: 'itens-vazio', loadChildren: './itens-vazio/itens-vazio.module#ItensVazioPageModule' },
+  { path: 'impostos', loadChildren: './impostos/impostos.module#ImpostosPageModule' },
 
 
 
