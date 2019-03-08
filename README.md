@@ -1,2 +1,5 @@
-# mxorcamento
-Aplicativo de Orçamento MXM
+﻿# mxorcamento
+
+Protótipo do Aplicativo de Orçamento MXM
+
+https://mxorcamento.herokuapp.com
