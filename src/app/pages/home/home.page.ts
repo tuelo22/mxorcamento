@@ -18,7 +18,7 @@ export class HomePage {
   }
 
   cardClick(){
-    this.navCtrl.navigateForward('orcamento-editar');   
+    this.navCtrl.navigateForward('orcamentos'); 
   }
 
   public doughnutChartLabels:string[] = ['Em Aprovação: 2', 'Aprovados: 20', 'Faturados: 30', 'Cancelados: 5'];
