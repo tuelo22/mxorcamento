@@ -18,16 +18,6 @@ export class AppComponent {
       icon: 'clipboard'
     },
     {
-      title: 'Endereços',
-      url: '/enderecos',
-      icon: 'business'
-    },
-    {
-      title: 'Configurações',
-      url: '/configuracoes',
-      icon: 'construct'    
-    },
-    {
       title: 'Sair',
       url: '/login',
       icon: 'exit'

@@ -10,8 +10,10 @@ import { ComponentPopoverOrdernarComponent } from 'src/app/component-popover-ord
 })
 export class OrcamentosPage implements OnInit {
 
-  constructor(private navCtrl : NavController, private menu: MenuController, private popoverCtrl: PopoverController) {
-    this.menu.enable(true); 
+  constructor(
+    private navCtrl : NavController, 
+    private menu: MenuController, 
+    private popoverCtrl: PopoverController) {
   }
 
   fabClick(){

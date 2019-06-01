@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { MenuController } from '@ionic/angular';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,9 +9,28 @@ import { MenuController } from '@ionic/angular';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+
+  barra: number;
   
-  constructor(private navCtrl : NavController, private menu: MenuController) {
-    this.menu.enable(true); 
+  constructor(
+    private navCtrl : NavController, 
+    private menu: MenuController,
+    private route:ActivatedRoute) {
+   }
+
+  ngOnInit(){
+
+    this.route.queryParams.subscribe(
+      (queryParams:any) => {
+        this.barra = queryParams['barra'];
+      }
+    );
+  
+    if(this.barra == 2){
+      this.menu.enable(false); 
+    }else{
+      this.menu.enable(true); 
+    }
   }
 
   fabClick(){
@@ -26,7 +46,7 @@ export class HomePage {
   public doughnutChartData:number[] = [2, 20, 30, 5];
   public doughnutChartType:string = 'pie';
   public barChartOptions:any = {
-    legend: {position: 'bottom'}
+    legend: {position: 'bottom', fullWidth: true}
   }
 
   // events

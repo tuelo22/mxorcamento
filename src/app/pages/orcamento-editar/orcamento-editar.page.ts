@@ -21,4 +21,7 @@ export class OrcamentoEditarPage implements OnInit {
   impostoClick(){
     this.navCtrl.navigateForward('impostos');
   }
+  enderecoClick(){
+    this.navCtrl.navigateForward('enderecos-cliente');  
+  }
 }
