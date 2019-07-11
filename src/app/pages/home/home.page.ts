@@ -42,7 +42,7 @@ export class HomePage {
   }
 
   public doughnutChartLabels:string[] = ['Em Aprovação: 2', 'Aprovados: 20', 'Faturados: 30', 'Cancelados: 5'];
-  public chartColors: Array<any> = [{backgroundColor: ['#ffce00','#1d3361','#336600','#f04141']}];
+  public chartColors: Array<any> = [{backgroundColor: ['#ffce00','#1d3361','#145A32','#f04141']}];
   public doughnutChartData:number[] = [2, 20, 30, 5];
   public doughnutChartType:string = 'pie';
   public barChartOptions:any = {
