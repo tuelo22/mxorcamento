@@ -1,109 +1,22 @@
 <ion-header>
     <ion-toolbar color="primary">
         <ion-buttons slot="start">
-            <ion-back-button></ion-back-button>
+            <ion-back-button defaultHref="/"></ion-back-button>
         </ion-buttons>
-        <ion-title>Orçamentos</ion-title>
+        <ion-title>
+            Orçamentos
+        </ion-title>
     </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <ion-item lines="full">
-        <ion-label>
-            <h1><b>Em aprovação</b></h1>
-        </ion-label>
-        <ion-button (click)="showMenu($event)" expand="full">
-            Ordenar
-            <ion-icon slot="start" name="funnel"></ion-icon>
-        </ion-button>
-    </ion-item>
-    <ion-searchbar showCancelButton placeholder="Buscar"></ion-searchbar>
-    <ion-grid>
-        <ion-row>
-            <ion-col size="12" size-md="6">
-                <ion-card>
-                    <ion-toolbar color="primary">
-                        <ion-title><b>Nº:</b> 33118818</ion-title>
-                        <ion-buttons slot="end">
-                            <ion-button fill="clear" (click)="cardClick()">
-                                <ion-icon color="light" slot="icon-only" name="create"></ion-icon>
-                            </ion-button>
-                            <ion-button fill="clear">
-                                <ion-icon color="danger" slot="icon-only" name="close-circle"></ion-icon>
-                            </ion-button>
-                        </ion-buttons>
-                    </ion-toolbar>
-                    <ion-card-content>
-                        <ion-grid>
-                            <ion-row size="12">
-                                <ion-col>
-                                    <h2><b>Hospital das Clinicas de Niteroi</b></h2>
-                                </ion-col>
-                            </ion-row>
-                            <ion-row>
-                                <ion-col>Criação:</ion-col>
-                                <ion-col><b>20/02/2019</b></ion-col>
-                            </ion-row>
-                            <ion-row>
-                                <ion-col>Versão:</ion-col>
-                                <ion-col><b>6</b></ion-col>
-                            </ion-row>
-                            <ion-row>
-                                <ion-col>Vencimento:</ion-col>
-                                <ion-col><b>01/12/2019</b></ion-col>
-                            </ion-row>
-                            <ion-row>
-                                <ion-col>Valor:</ion-col>
-                                <ion-col><b>R$ 2400,00</b></ion-col>
-                            </ion-row>
-                        </ion-grid>
-                    </ion-card-content>
-                </ion-card>
-            </ion-col>
-            <ion-col size="12" size-md="6">
-                <ion-card>
-                    <ion-toolbar color="primary">
-                        <ion-title><b>Nº:</b> 33118817</ion-title>
-                        <ion-buttons slot="end">
-                            <ion-button fill="clear" (click)="cardClick()">
-                                <ion-icon color="light" slot="icon-only" name="create"></ion-icon>
-                            </ion-button>
-                            <ion-button fill="clear">
-                                <ion-icon color="danger" slot="icon-only" name="close-circle"></ion-icon>
-                            </ion-button>
-                        </ion-buttons>
-                    </ion-toolbar>
-                    <ion-card-content>
-                        <ion-grid>
-                            <ion-row size="12">
-                                <ion-col>
-                                    <h2><b>Hospital das Clinicas de Niteroi</b></h2>
-                                </ion-col>
-                            </ion-row>
-                            <ion-row>
-                                <ion-col>Criação:</ion-col>
-                                <ion-col><b>20/02/2019</b></ion-col>
-                            </ion-row>
-                            <ion-row>
-                                <ion-col>Versão:</ion-col>
-                                <ion-col><b>1</b></ion-col>
-                            </ion-row>
-                            <ion-row>
-                                <ion-col>Vencimento:</ion-col>
-                                <ion-col><b>01/12/2019</b></ion-col>
-                            </ion-row>
-                            <ion-row>
-                                <ion-col>Valor:</ion-col>
-                                <ion-col><b>R$ 2400,00</b></ion-col>
-                            </ion-row>
-                        </ion-grid>
-                    </ion-card-content>
-                </ion-card>
-            </ion-col>
-        </ion-row>
-    </ion-grid>
+    <ion-list>
+        <ion-item *ngFor="let item of result" (click)="ItemClick()"  style="--padding-end:16px;">
+          <ion-label color="primary" text-wrap>Nº {{item.OrdemVenda | json}} Cliente: {{item.CodigoCliente | json}} - {{item.DescricaoCliente | json}}  Total: {{item.Total | json}}</ion-label>
+        </ion-item>
+       </ion-list> 
     <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-        <ion-fab-button (click)="fabClick()" color="secondary">
+        <ion-fab-button (click)="fabClick()" color="primary">
             <ion-icon name="add"></ion-icon>
         </ion-fab-button>
     </ion-fab>

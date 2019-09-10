@@ -8,7 +8,7 @@ import { NavController } from '@ionic/angular';
 })
 export class OrcamentoEditarPage implements OnInit {
 
-  constructor(private navCtrl : NavController) { }
+  constructor(private navCtrl: NavController) { }
 
   ngOnInit() {
   }
@@ -22,6 +22,6 @@ export class OrcamentoEditarPage implements OnInit {
     this.navCtrl.navigateForward('impostos');
   }
   enderecoClick(){
-    this.navCtrl.navigateForward('enderecos-cliente');  
+    this.navCtrl.navigateForward('enderecos-cliente');
   }
 }

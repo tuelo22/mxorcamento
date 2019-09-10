@@ -12,52 +12,45 @@
 <ion-content padding>
     <ion-item>
         <ion-label position="floating">Código do Item</ion-label>
-        <ion-input name="codigoItem" type="text"></ion-input>
+        <ion-input (click)="itensClick()" [(ngModel)]="item.Codigo" name="codigo" type="text"></ion-input>
         <ion-icon name="search" slot="end"></ion-icon>
     </ion-item>
     <ion-item>
         <ion-label position="floating">Descrição</ion-label>
-        <ion-input name="codigoItem" type="text" disabled></ion-input>
+        <ion-input  [(ngModel)]="item.Descricao" name="descricao" type="text" disabled></ion-input>
     </ion-item>
     <ion-item>
         <ion-label position="floating">Unidade</ion-label>
-        <ion-input name="unidade" type="text"></ion-input>
+        <ion-input [(ngModel)]="item.Unidade" name="unidade" type="text"></ion-input>
         <ion-icon name="search" slot="end"></ion-icon>
     </ion-item>
     <ion-item>
         <ion-label position="floating">Tabela de Preço</ion-label>
-        <ion-input name="tabelaPreco" type="text"></ion-input>
+        <ion-input  [(ngModel)]="item.TabelaPreco"  name="tabelaPreco" type="text"></ion-input>
         <ion-icon name="search" slot="end"></ion-icon>
     </ion-item>
     <ion-item>
         <ion-label position="floating">Preço</ion-label>
-        <ion-input name="preco" type="number"></ion-input>
+        <ion-input (focusout)="calcularTotal" [(ngModel)]="item.Preco" name="preco" type="text"></ion-input>
     </ion-item>
     <ion-item>
         <ion-label position="floating">% Desconto</ion-label>
-        <ion-input name="preco" type="number" mim="0" max="100"></ion-input>
+        <ion-input  [(ngModel)]="item.Desconto" name="preco" type="number" min="0" max="100"></ion-input>
     </ion-item>
     <ion-item>
         <ion-label position="floating">Quantidade</ion-label>
-        <ion-input name="diasEntrega" type="number"></ion-input>
+        <ion-input (focusout)="calcularTotal" [(ngModel)]="item.Quantidade" name="quantidade" type="text"></ion-input>
     </ion-item>
     <ion-item style="--padding-start: 0px">
         <ion-label style="padding-left: 16px"><b>Saldo: </b>0</ion-label>
-    </ion-item>
-    <ion-item style="--padding-start: 0px">
-        <ion-label style="padding-left: 16px"><b>Total: </b>R$ 00,00</ion-label>
     </ion-item>
 </ion-content>
 <ion-footer>
     <ion-toolbar color="primary">
         <ion-buttons slot="start">
-            <ion-button color="success" disabled>
+            <ion-button (click)="adicionarItem()" color="success">
                 <ion-icon slot="start" name="save"></ion-icon>
                 Salvar
-            </ion-button>
-            <ion-button color="danger" disabled>
-                <ion-icon slot="start" name="calculator"></ion-icon>
-                Impostos
             </ion-button>
         </ion-buttons>
     </ion-toolbar>

@@ -8,15 +8,15 @@ import { NavController, PopoverController } from '@ionic/angular';
 })
 export class ItensVazioPage implements OnInit {
 
-  constructor(private navCtrl : NavController) { }
+  constructor(private navCtrl: NavController) { }
 
   ngOnInit() {
   }
 
-  fabClick(){
+  fabClick() {
     this.navCtrl.navigateForward('item-novo');
   }
-  editItemClick(){
+  editItemClick() {
     this.navCtrl.navigateForward('item-editar');
   }
 }

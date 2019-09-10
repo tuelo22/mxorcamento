@@ -8,7 +8,7 @@ import { ChartsModule } from 'ng2-charts';
     CommonModule,
     ChartsModule
   ],
-  exports: [    
+  exports: [
     CommonModule,
     ChartsModule
   ]

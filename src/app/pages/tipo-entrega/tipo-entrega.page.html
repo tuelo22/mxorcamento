@@ -4,15 +4,15 @@
           <ion-back-button></ion-back-button>
       </ion-buttons>
       <ion-title>
-          Endereços
+          Tipo de Entrega
       </ion-title>
   </ion-toolbar>
 </ion-header>
   <ion-searchbar showCancelButton placeholder="Buscar"></ion-searchbar>
   <ion-content style="padding:0;">
      <ion-list>
-        <ion-item *ngFor="let endereco of enderecos; let i=index " (click)="ItemClick(i)" style="--padding-end:16px; font-weight: bold;">
-            <ion-label color="primary" text-wrap>{{endereco}}</ion-label>
-        </ion-item>
-    </ion-list> 
+      <ion-item *ngFor="let tipoEntrega of tiposEntrega; let i=index" (click)="ItemClick(i)"  style="--padding-end:16px;">
+        <ion-label color="primary" text-wrap>{{tipoEntrega}}</ion-label>
+      </ion-item>
+     </ion-list> 
 </ion-content>

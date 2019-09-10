@@ -10,13 +10,13 @@
   </ion-header>
 
 <ion-content >
-  <ion-searchbar showCancelButton placeholder="Buscar Cliente"></ion-searchbar>
+  <ion-searchbar showCancelButton placeholder="Buscar Endere~p"></ion-searchbar>
   <ion-list>
     <ion-list-header>
-          <ion-label><h1>Selecione um Cliente</h1></ion-label>
+          <ion-label><h1>Selecione um Endereço</h1></ion-label>
     </ion-list-header>
-    <ion-item *ngFor="let cliente of clientes" (click)="ItemClick()" style="--padding-end:16px; font-weight: bold;">
-        <ion-label color="primary" text-wrap>{{cliente}}</ion-label>
+    <ion-item *ngFor="let endereo of enderecos; let i:index " (click)="ItemClick(i)" style="--padding-end:16px; font-weight: bold;">
+        <ion-label color="primary" text-wrap>{{enderecos}}</ion-label>
     </ion-item>
   </ion-list> 
 </ion-content>

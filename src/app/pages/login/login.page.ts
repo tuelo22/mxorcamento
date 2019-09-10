@@ -9,13 +9,13 @@ import { NavController } from '@ionic/angular';
 })
 export class LoginPage implements OnInit {
 
-  constructor(private menu: MenuController, private navCtrl : NavController) {
+  constructor(private menu: MenuController, private navCtrl: NavController) {
     this.menu.enable(false);
    }
 
-   loginClick(){
+   loginClick() {
     this.navCtrl.navigateForward('home');
-  }  
+  }
 
   ngOnInit() {
   }

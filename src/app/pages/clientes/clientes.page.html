@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>
+          Clientes
+      </ion-title>
+  </ion-toolbar>
+</ion-header>
+  <ion-searchbar showCancelButton placeholder="Buscar"></ion-searchbar>
+  <ion-content style="padding:0;"> 
+    <ion-list>
+      <ion-item *ngFor="let cliente of result; let i=index" (click)="ItemClick(i)"  style="--padding-end:16px;">
+        <ion-label name="cliente" color="primary" text-wrap>{{cliente.Codigo}} - {{cliente.Nome}}</ion-label>
+      </ion-item>
+    </ion-list> 
+</ion-content>

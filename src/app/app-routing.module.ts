@@ -23,6 +23,11 @@ const routes: Routes = [
   { path: 'itens-vazio', loadChildren: './pages/itens-vazio/itens-vazio.module#ItensVazioPageModule' },
   { path: 'impostos', loadChildren: './pages/impostos/impostos.module#ImpostosPageModule' },
   { path: 'configuracoes', loadChildren: './pages/configuracoes/configuracoes.module#ConfiguracoesPageModule' },
+  { path: 'clientes', loadChildren: './pages/clientes/clientes.module#ClientesPageModule' },
+  { path: 'tipo-entrega', loadChildren: './pages/tipo-entrega/tipo-entrega.module#TipoEntregaPageModule' },
+  { path: 'condicao-pagamento', loadChildren: './pages/condicao-pagamento/condicao-pagamento.module#CondicaoPagamentoPageModule' },
+  { path: 'lista-itens', loadChildren: './pages/lista-itens/lista-itens.module#ListaItensPageModule' },
+  { path: 'item', loadChildren: './pages/item/item.module#ItemPageModule' },
 ];
 
 @NgModule({
