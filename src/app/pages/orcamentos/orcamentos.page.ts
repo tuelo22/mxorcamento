@@ -1,3 +1,4 @@
+import { OrcamentosService } from './../../services/orcamentos.service';
 import { Component, OnInit } from '@angular/core';
 import { NavController, MenuController, PopoverController } from '@ionic/angular';
 import { ComponentPopoverOrdernarComponent } from 'src/app/component-popover-ordernar/component-popover-ordernar.component';
@@ -10,10 +11,13 @@ import { ComponentPopoverOrdernarComponent } from 'src/app/component-popover-ord
 })
 export class OrcamentosPage implements OnInit {
 
+  result: any;
+
   constructor(
     private navCtrl : NavController, 
     private menu: MenuController, 
-    private popoverCtrl: PopoverController) {
+    private popoverCtrl: PopoverController,
+    private orcamentosService: OrcamentosService) {
   }
 
   fabClick(){
@@ -25,6 +29,8 @@ export class OrcamentosPage implements OnInit {
   }
 
   ngOnInit() {
+    this.orcamentosService.obterOrcamentos().subscribe(x => this.result = x);
+
   }
 
   async showMenu(event: any){
@@ -36,5 +42,6 @@ export class OrcamentosPage implements OnInit {
 
     return await popover.present();
   }
+
 
 }

@@ -10,7 +10,7 @@
 </ion-header>
 
 <ion-content>
-    <ion-searchbar showCancelButton placeholder="Buscar Orçamentos"></ion-searchbar>
+    <ion-searchbar (click)="orcamentosClick()" showCancelButton placeholder="Buscar Orçamentos"></ion-searchbar>
     <div padding>
         <ion-item style="font-weight: bold;">
             <ion-select>
@@ -78,7 +78,7 @@
     </div>
 
     <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-        <ion-fab-button (click)="fabClick()" color="secondary">
+        <ion-fab-button (click)="fabClick()" color="primary">
             <ion-icon name="add"></ion-icon>
         </ion-fab-button>
     </ion-fab>

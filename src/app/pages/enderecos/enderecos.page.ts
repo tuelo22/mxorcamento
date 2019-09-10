@@ -1,3 +1,4 @@
+import { OrcamentoService } from './../orcamento-novo/orcamento-novo.service';
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 
@@ -8,19 +9,23 @@ import { NavController } from '@ionic/angular';
 })
 export class EnderecosPage implements OnInit {
 
-  clientes : string[] =[ 'Hospital de Clinicas de Niterói', 
-                       'Hospital Rio Laranjeiras', 
+  enderecos: string[] = [ 'Hospital de Clinicas de Niterói',
+                       'Hospital Rio Laranjeiras',
                        'Hospital São Lucas',
                        'Hospital Espanhol',
                        'Hospital Unimed-Rio'];
 
-  constructor(private navCtrl : NavController) { }
+  constructor(private navCtrl: NavController,
+              private orcamentoService: OrcamentoService) { }
 
   ngOnInit() {
   }
 
-  ItemClick(){
-    this.navCtrl.navigateForward('enderecos-cliente');
+  ItemClick(index: any) {
+    const enderecoEntrega =  this.enderecos[index];
+    console.log(enderecoEntrega);
+    this.orcamentoService.setEnderecoEntrega(enderecoEntrega);
+    this.navCtrl.navigateForward('enderecos-enderecoEntrega');
   }
 
 }

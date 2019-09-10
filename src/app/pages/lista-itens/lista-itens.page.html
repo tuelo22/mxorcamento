@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>
+          Itens
+      </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-item lines="full" *ngFor="let item of itens; let i=index;">
+  <ion-label text-wrap>
+      <p>{{itens.length}} Itens | Total: <b> R$ {{item.Total | json}} </b></p>
+  </ion-label>
+  <ion-button expand="full" disabled>
+      Ordenar
+      <ion-icon slot="start" name="funnel"></ion-icon>
+  </ion-button>
+</ion-item>
+<ion-searchbar showCancelButton placeholder="Buscar"></ion-searchbar>
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button (click)="fabClick()" color="primary">
+      <ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+
+  <ion-content style="padding:0;">
+     <ion-list>
+      <ion-item *ngFor="let item of itens" (click)="ItemClick()"  style="--padding-end:16px;">
+        <ion-label color="primary" text-wrap>{{item.Codigo + " - " + item.Descricao | json}}</ion-label>
+      </ion-item>
+     </ion-list> 
+</ion-content>
